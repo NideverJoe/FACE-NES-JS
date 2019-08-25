@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>NES FACE</title>
+		
+		<script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+		<script>window.onload = function(){nes_load_url("nes-canvas", "zelda.nes");}</script>
+		<script src="/js/face-api.js"></script>
+		<script src="/js/commons.js"></script>
+		<script src="/js/faceDetectionControls.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script type="text/javascript" src="/js/nes-embed.js"></script>
+	  
+	</head>
+	<body>
+		<div class="row text-center">
+<div class="col-md-12"><h1>NES FACE TEST</h1></div>
+		</div>
+		<div class="row">
+		<div class="col-md-6 text-center">
+			<div style="margin: auto; width: 95%;">
+			<canvas id="nes-canvas" width="256" height="240" style="width: 80%"/>
+		</div>
+		<h4>DPad: Move your face U,D,L,R!<br>Start: Return<br>Select: Spacebar<br>A Button: Look Surprised!<br>B Button: Look Angry!</h4>
+	</div>
+	<div class="col-md-6">
+    
+			<div style="position: relative" class="margin">
+					<video onloadedmetadata="onPlay(this)" style="transform: scaleX(-1)" id="inputVideo" autoplay muted
+					  playsinline></video>
+					<canvas style="transform: scaleX(-1)" id="overlay" />
+				  </div>
+			  
+				  <div class="row text-center">
+					<div class="col-md-6" style="width:80%" id="directionx">
+			  
+					</div>
+					<div class="col-md-6" style="width:80%" id="directiony">
+			  
+					</div>
+				  </div>
+
+				  <div class="row text-center">
+						<div class="col-md-6" style="height:400%" id="ba">
+				  
+						</div>
+						<div class="col-md-6" style="width:200%" id="ss">
+				  
+						</div>
+					  </div>
+
+	</div>
+	</div>
+	</body>
+</html>
